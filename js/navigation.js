@@ -1,8 +1,18 @@
 const navigationContainer = document.getElementById("navigation-container");
 
+const siteBasePath = window.location.hostname.includes("github.io")
+  ? "/rogue-moments-photography"
+  : "";
+
 if (navigationContainer) {
-  fetch("/components/navigation.html")
-    .then(response => response.text())
+  fetch(`${siteBasePath}/components/navigation.html`)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error("Navigation file could not be loaded.");
+      }
+
+      return response.text();
+    })
     .then(data => {
       navigationContainer.innerHTML = data;
     })
