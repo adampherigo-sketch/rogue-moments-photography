@@ -1,0 +1,198 @@
+/* ================================
+   SHARED SITE NAVIGATION
+   Rogue Moments Photography
+================================ */
+
+.site-navigation {
+  position: fixed;
+
+  top: 24px;
+  left: 24px;
+
+  z-index: 9999;
+}
+
+/* MENU TRIGGER */
+
+.menu-trigger {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  cursor: pointer;
+}
+
+/* LOGO */
+
+.menu-logo {
+  width: 95px;
+  height: 95px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-logo img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: contain;
+  object-position: center;
+}
+
+/* TEMP TEXT LOGO */
+
+.menu-logo-text {
+  width: 82px;
+  height: 82px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #ffffff;
+
+  font-size: 2rem;
+  font-style: italic;
+  font-weight: 700;
+}
+
+/* MENU TEXT */
+
+.menu-text {
+  margin-top: 10px;
+
+  color: rgba(255,255,255,0.82);
+
+  font-size: 0.8rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+
+  transition: color 0.25s ease;
+}
+
+.menu-trigger:hover .menu-text {
+  color: white;
+}
+
+/* DROPDOWN */
+
+.menu-dropdown {
+  position: absolute;
+
+  top: 120px;
+  left: 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+
+  opacity: 0;
+  visibility: hidden;
+
+  transform: translateY(-12px);
+
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease,
+    visibility 0.3s ease;
+}
+
+/* SHOW DROPDOWN */
+
+.menu-trigger:hover .menu-dropdown {
+  opacity: 1;
+  visibility: visible;
+
+  transform: translateY(0);
+}
+
+/* BANNER BUTTONS */
+
+.nav-banner {
+  min-width: 240px;
+
+  padding: 1rem 1.8rem;
+
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  color: white;
+
+  text-decoration: none;
+  text-transform: uppercase;
+
+  font-size: 0.9rem;
+  font-weight: 600;
+
+  letter-spacing: 0.14em;
+
+  background: #111111;
+
+  border: 2px solid rgba(192,192,192,0.8);
+
+  box-shadow:
+    0 0 18px rgba(255,255,255,0.08),
+    inset 0 0 14px rgba(255,255,255,0.08);
+
+  clip-path:
+    polygon(
+      0 0,
+      92% 0,
+      100% 50%,
+      92% 100%,
+      0 100%
+    );
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease,
+    background 0.25s ease;
+}
+
+/* HOVER */
+
+.nav-banner:hover {
+  transform: translateX(10px);
+
+  border-color: white;
+
+  background: #1a1a1a;
+
+  box-shadow:
+    0 0 28px rgba(192,192,192,0.35),
+    inset 0 0 18px rgba(255,255,255,0.12);
+}
+
+/* MOBILE */
+
+@media (max-width: 900px) {
+
+  .site-navigation {
+    top: 16px;
+    left: 16px;
+  }
+
+  .menu-logo,
+  .menu-logo-text {
+    width: 68px;
+    height: 68px;
+  }
+
+  .menu-dropdown {
+    top: 100px;
+  }
+
+  .nav-banner {
+    min-width: 200px;
+    font-size: 0.82rem;
+  }
+}

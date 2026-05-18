@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Bookings | Rogue Moments Photography</title>
+
+  <link rel="stylesheet" href="../../css/global.css" />
+  <link rel="stylesheet" href="../../css/navigation.css" />
+  <link rel="stylesheet" href="../../css/bookings.css" />
+</head>
+
+<body class="bookings-page">
+
+  <!-- SHARED NAVIGATION -->
+  <div id="navigation-container"></div>
+
+  <!-- HEADER -->
+  <header class="bookings-header">
+
+    <div class="bookings-title-wrapper">
+
+      <h1>Bookings</h1>
+
+      <div class="bookings-divider"></div>
+
+      <p>
+        Start your session request here.
+      </p>
+
+    </div>
+
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="bookings-main">
+
+    <!-- INTRO -->
+    <section class="bookings-intro">
+
+      <h2>
+        Tell me what you’re dreaming up.
+      </h2>
+
+      <p>
+        Use this form to request a session, share your vision, and give me the details I need to start planning with you.
+      </p>
+
+    </section>
+
+    <!-- BOOKING LAYOUT -->
+    <section class="bookings-layout">
+
+      <!-- BOOKING FORM -->
+      <form class="booking-form">
+
+        <div class="form-row">
+          <label for="booking-name">Your Name</label>
+
+          <input
+            type="text"
+            id="booking-name"
+            name="booking-name"
+            placeholder="Your name"
+          />
+        </div>
+
+        <div class="form-row">
+          <label for="booking-email">Email</label>
+
+          <input
+            type="email"
+            id="booking-email"
+            name="booking-email"
+            placeholder="you@example.com"
+          />
+        </div>
+
+        <div class="form-row">
+          <label for="booking-phone">Phone Number</label>
+
+          <input
+            type="tel"
+            id="booking-phone"
+            name="booking-phone"
+            placeholder="Best contact number"
+          />
+        </div>
+
+        <div class="form-row">
+          <label for="session-type">Session Type</label>
+
+          <select id="session-type" name="session-type">
+
+            <option value="">
+              Choose a session type
+            </option>
+
+            <option value="portrait">
+              Portrait Session
+            </option>
+
+            <option value="couples">
+              Couples Session
+            </option>
+
+            <option value="pets">
+              Pet Session
+            </option>
+
+            <option value="events">
+              Event Session
+            </option>
+
+            <option value="lifestyle">
+              Lifestyle Session
+            </option>
+
+            <option value="other">
+              Other / Creative Idea
+            </option>
+
+          </select>
+        </div>
+
+        <div class="form-row">
+          <label for="preferred-date">Preferred Date</label>
+
+          <input
+            type="date"
+            id="preferred-date"
+            name="preferred-date"
+          />
+        </div>
+
+        <div class="form-row">
+          <label for="location">Location Idea</label>
+
+          <input
+            type="text"
+            id="location"
+            name="location"
+            placeholder="Studio, park, city, home, etc."
+          />
+        </div>
+
+        <div class="form-row full">
+
+          <label for="vision">
+            Your Vision
+          </label>
+
+          <textarea
+            id="vision"
+            name="vision"
+            rows="7"
+            placeholder="Tell me the vibe, style, mood, or story you want captured..."
+          ></textarea>
+
+        </div>
+
+        <button type="submit">
+          Request Booking
+        </button>
+
+      </form>
+
+      <!-- SIDE INFO CARD -->
+      <aside class="booking-side-card">
+
+        <h3>
+          What Happens Next?
+        </h3>
+
+        <div class="booking-step">
+          <span>01</span>
+
+          <p>
+            You submit your session request.
+          </p>
+        </div>
+
+        <div class="booking-step">
+          <span>02</span>
+
+          <p>
+            I review the details and confirm availability.
+          </p>
+        </div>
+
+        <div class="booking-step">
+          <span>03</span>
+
+          <p>
+            We plan the vibe, location, and session flow.
+          </p>
+        </div>
+
+                <div class="booking-step">
+          <span>04</span>
+
+          <p>
+            Your Rogue Moment gets captured.
+          </p>
+        </div>
+
+        <a href="../sessions/">
+          View Sessions
+        </a>
+
+      </aside>
+
+    </section>
+
+  </main>
+
+  <!-- SHARED NAVIGATION SCRIPT -->
+  <script src="../../js/navigation.js"></script>
+
+</body>
+</html>

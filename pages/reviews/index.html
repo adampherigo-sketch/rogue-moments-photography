@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Reviews | Rogue Moments Photography</title>
+
+  <link rel="stylesheet" href="../../css/global.css" />
+  <link rel="stylesheet" href="../../css/navigation.css" />
+  <link rel="stylesheet" href="../../css/reviews.css" />
+</head>
+
+<body class="reviews-page">
+
+  <!-- SHARED NAVIGATION -->
+  <div id="navigation-container"></div>
+
+  <!-- HEADER -->
+  <header class="reviews-header">
+
+    <div class="reviews-title-wrapper">
+
+      <h1>Reviews</h1>
+
+      <div class="reviews-divider"></div>
+
+      <p>
+        Kind words, real moments, and client stories.
+      </p>
+
+    </div>
+
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="reviews-main">
+
+    <!-- FEATURED INTRO -->
+    <section class="reviews-feature">
+
+      <p class="reviews-kicker">
+        Client Love
+      </p>
+
+      <h2>
+        Every session leaves a story behind.
+      </h2>
+
+      <p>
+        This page will eventually hold real reviews from clients, couples, families, pet parents, and event sessions.
+        For now, these are styled placeholders so the page has shape and personality.
+      </p>
+
+    </section>
+
+    <!-- REVIEW GRID -->
+    <section class="reviews-grid">
+
+      <!-- FEATURED REVIEW -->
+      <article class="review-card featured-review">
+
+        <div class="quote-mark">“</div>
+
+        <p>
+          The photos felt natural, emotional, and completely us. Nothing felt forced, and the final images captured moments we did not even realize were happening.
+        </p>
+
+        <h3>
+          Portrait Session
+        </h3>
+
+        <span>
+          Placeholder Review
+        </span>
+
+      </article>
+
+      <!-- REVIEW 2 -->
+      <article class="review-card">
+
+        <div class="quote-mark">“</div>
+
+        <p>
+          I felt comfortable the entire time. The session was relaxed, creative, and full of small moments that turned into beautiful photos.
+        </p>
+
+        <h3>
+          Lifestyle Session
+        </h3>
+
+        <span>
+          Placeholder Review
+        </span>
+
+      </article>
+
+      <!-- REVIEW 3 -->
+      <article class="review-card">
+
+        <div class="quote-mark">“</div>
+
+        <p>
+          Our pet’s personality came through perfectly. The pictures were playful, sweet, and exactly what we wanted.
+        </p>
+
+        <h3>
+          Pet Session
+        </h3>
+
+        <span>
+          Placeholder Review
+        </span>
+
+      </article>
+
+      <!-- REVIEW 4 -->
+      <article class="review-card">
+
+        <div class="quote-mark">“</div>
+
+        <p>
+          The event photos captured the energy of the night without feeling staged. Every image felt like a memory.
+        </p>
+
+        <h3>
+          Event Session
+        </h3>
+
+        <span>
+          Placeholder Review
+        </span>
+
+      </article>
+
+    </section>
+
+    <!-- REVIEW SUBMISSION -->
+    <section class="review-submit-section">
+
+      <div class="review-submit-intro">
+
+        <h2>
+          Submit Your Review
+        </h2>
+
+        <p>
+          This form is for confirmed Rogue Moments clients. Share your experience, and if you want, include your favorite photo from your session.
+        </p>
+
+      </div>
+
+      <form class="review-form">
+
+        <div class="form-row">
+
+          <label for="client-name">
+            Your Name
+          </label>
+
+          <input
+            type="text"
+            id="client-name"
+            name="client-name"
+            placeholder="Your name"
+          />
+
+        </div>
+
+        <div class="form-row">
+
+          <label for="client-email">
+            Email Used for Booking
+          </label>
+
+          <input
+            type="email"
+            id="client-email"
+            name="client-email"
+            placeholder="you@example.com"
+          />
+
+        </div>
+
+        <div class="form-row">
+
+          <label for="session-type">
+            Session Type
+          </label>
+
+          <select id="session-type" name="session-type">
+
+            <option value="">
+              Choose a session type
+            </option>
+
+            <option value="portrait">
+              Portrait Session
+            </option>
+
+            <option value="couples">
+              Couples Session
+            </option>
+
+            <option value="pet">
+              Pet Session
+            </option>
+
+            <option value="event">
+              Event Session
+            </option>
+
+            <option value="lifestyle">
+              Lifestyle Session
+            </option>
+
+          </select>
+
+        </div>
+
+        <div class="form-row">
+
+          <label for="review-message">
+            Your Review
+          </label>
+
+          <textarea
+            id="review-message"
+            name="review-message"
+            rows="6"
+            placeholder="Tell me what your session felt like..."
+          ></textarea>
+
+        </div>
+
+        <div class="form-row">
+
+          <label for="favorite-photo">
+            Favorite Photo From Your Shoot
+          </label>
+
+          <input
+            type="file"
+            id="favorite-photo"
+            name="favorite-photo"
+            accept="image/*"
+          />
+
+          <small>
+            Optional. Upload the photo you would like featured with your review.
+          </small>
+
+        </div>
+
+        <div class="form-row checkbox-row">
+
+          <input
+            type="checkbox"
+            id="permission"
+            name="permission"
+          />
+
+          <label for="permission">
+            I give Rogue Moments Photography permission to post my review and submitted photo.
+          </label>
+
+        </div>
+
+        <button type="submit">
+          Submit Review
+        </button>
+
+      </form>
+
+    </section>
+
+    <!-- CTA -->
+    <section class="reviews-cta">
+
+      <h2>
+        Had a session with Rogue Moments?
+      </h2>
+
+      <p>
+        Your words help future clients know what the experience feels like.
+      </p>
+
+      <a href="../bookings/">
+        Book Your Own Session
+      </a>
+
+    </section>
+
+  </main>
+
+  <!-- SHARED NAVIGATION SCRIPT -->
+  <script src="../../js/navigation.js"></script>
+
+</body>
+</html>

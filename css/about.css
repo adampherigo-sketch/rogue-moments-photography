@@ -1,0 +1,333 @@
+/* ================================
+   ABOUT PAGE ONLY
+   Rogue Moments Photography
+
+   This file controls ONLY the About page layout.
+   The shared left navigation is controlled by nav.css.
+================================ */
+
+:root {
+  --about-black: #050505;
+  --about-soft-black: #0f0f0f;
+  --about-white: #f5f5f5;
+  --about-muted-white: rgba(255, 255, 255, 0.75);
+  --about-body-white: rgba(255, 255, 255, 0.84);
+  --about-silver: rgba(192, 192, 192, 0.85);
+
+  --about-header-height: 155px;
+  --shared-nav-width: 190px;
+}
+
+/* ================================
+   ABOUT PAGE BASE
+================================ */
+
+body.about-page {
+  min-height: 100vh;
+
+  background-color: var(--about-black);
+  color: var(--about-white);
+
+  font-family: Georgia, "Times New Roman", serif;
+  overflow-x: hidden;
+}
+
+/* ================================
+   FIXED TOP BANNER
+================================ */
+
+.about-header {
+  position: fixed;
+  top: 0;
+  left: var(--shared-nav-width);
+  right: 0;
+  z-index: 100;
+
+  height: var(--about-header-height);
+  padding: 22px 36px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(5, 5, 5, 0.96);
+  backdrop-filter: blur(12px);
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+
+  box-shadow:
+    0 12px 35px rgba(0, 0, 0, 0.5);
+}
+
+.about-title-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+}
+
+.about-header h1 {
+  margin: 0;
+
+  font-size: clamp(2.8rem, 5vw, 4.4rem);
+  line-height: 1;
+  font-style: italic;
+  font-weight: 300;
+  letter-spacing: 0.03em;
+
+  text-shadow:
+    3px 3px 0 rgba(50, 50, 50, 0.6),
+    0 0 18px rgba(255, 255, 255, 0.16);
+}
+
+.about-divider {
+  width: min(420px, 70vw);
+  height: 1px;
+  margin: 18px auto 10px;
+
+  background: rgba(192, 192, 192, 0.45);
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.12);
+}
+
+.about-header p {
+  margin: 0;
+
+  font-size: 0.95rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+
+  color: var(--about-muted-white);
+}
+
+/* ================================
+   MAIN ABOUT CONTENT
+================================ */
+
+.about-main {
+  min-height: 100vh;
+
+  padding:
+    calc(var(--about-header-height) + 46px)
+    clamp(24px, 5vw, 72px)
+    80px;
+}
+
+.about-layout {
+  width: 100%;
+  max-width: 1250px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 42%);
+  gap: clamp(2rem, 5vw, 5rem);
+  align-items: start;
+}
+
+/* Left side scrolling bio */
+.about-bio {
+  max-width: 720px;
+  padding-bottom: 45vh;
+}
+
+.about-bio h2 {
+  margin-bottom: 1.4rem;
+
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  line-height: 1.15;
+  font-weight: 300;
+  font-style: italic;
+  text-align: left;
+
+  color: #ffffff;
+}
+
+.about-bio p {
+  max-width: 680px;
+  margin-bottom: 1.4rem;
+
+  font-size: 1.08rem;
+  line-height: 1.85;
+  letter-spacing: 0.03em;
+
+  color: var(--about-body-white);
+}
+
+/* Right side sticky photo */
+.about-photo {
+  position: sticky;
+  top: calc(var(--about-header-height) + 46px);
+
+  height: calc(100vh - var(--about-header-height) - 92px);
+  padding: 8px;
+
+  border: 2px solid var(--about-silver);
+
+  box-shadow:
+    0 0 12px rgba(255, 255, 255, 0.45),
+    inset 0 0 12px rgba(255, 255, 255, 0.2);
+}
+
+.about-photo img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+  object-fit: cover;
+
+  filter: contrast(1.08);
+}
+
+/* ================================
+   ABOUT CTA BUTTON
+================================ */
+
+.about-cta {
+  margin-top: 1.2rem;
+  padding: 1rem 1.8rem;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  font-size: 0.9rem;
+  letter-spacing: 0.13em;
+  font-weight: 600;
+
+  border: 2px solid rgba(192, 192, 192, 0.85);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.06);
+
+  box-shadow:
+    0 0 22px rgba(255, 255, 255, 0.09),
+    inset 0 0 18px rgba(255, 255, 255, 0.08);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.about-cta:hover {
+  transform: scale(1.07);
+
+  border-color: white;
+
+  box-shadow:
+    0 0 40px rgba(192, 192, 192, 0.55),
+    inset 0 0 26px rgba(255, 255, 255, 0.2);
+}
+
+/* ================================
+   TABLET
+================================ */
+
+@media (max-width: 1100px) {
+  .about-layout {
+    grid-template-columns: minmax(0, 1fr) minmax(280px, 40%);
+    gap: 2.5rem;
+  }
+}
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 900px) {
+  :root {
+    --about-header-height: 135px;
+    --shared-nav-width: 0px;
+  }
+
+  body.about-page {
+    padding-bottom: 90px;
+  }
+
+  .about-header {
+    left: 0;
+    height: var(--about-header-height);
+    padding: 16px 20px;
+  }
+
+  .about-header h1 {
+    font-size: 2.7rem;
+  }
+
+  .about-header p {
+    font-size: 0.75rem;
+  }
+
+  .about-main {
+    padding:
+      calc(var(--about-header-height) + 30px)
+      20px
+      120px;
+  }
+
+  .about-layout {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .about-photo {
+    position: relative;
+    top: auto;
+    order: -1;
+
+    height: auto;
+  }
+
+  .about-photo img {
+    height: min(60vh, 460px);
+  }
+
+  .about-bio {
+    max-width: 100%;
+    padding-bottom: 0;
+  }
+
+  .about-bio h2 {
+    text-align: center;
+  }
+
+  .about-bio p {
+    max-width: 100%;
+
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .about-cta {
+    width: fit-content;
+    margin: 1.5rem auto 0;
+
+    display: flex;
+  }
+}
+
+/* ================================
+   VERY SMALL PHONES
+================================ */
+
+@media (max-width: 480px) {
+  .about-header h1 {
+    font-size: 2.25rem;
+  }
+
+  .about-header p {
+    letter-spacing: 0.08em;
+  }
+
+  .about-bio h2 {
+    font-size: 1.75rem;
+  }
+
+  .about-bio p {
+    font-size: 0.96rem;
+    line-height: 1.75;
+  }
+}
