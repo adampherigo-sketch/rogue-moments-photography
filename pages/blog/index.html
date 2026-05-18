@@ -6,9 +6,9 @@
 
   <title>Blog | Rogue Moments Photography</title>
 
-  <link rel="stylesheet" href="../../css/global.css" />
-  <link rel="stylesheet" href="../../css/navigation.css" />
-  <link rel="stylesheet" href="../../css/blog.css" />
+  <link rel="stylesheet" href="/rogue-moments-photography/css/global.css" />
+  <link rel="stylesheet" href="/rogue-moments-photography/css/navigation.css" />
+  <link rel="stylesheet" href="/rogue-moments-photography/css/blog.css" />
 </head>
 
 <body class="blog-page">
@@ -39,11 +39,11 @@
     <section class="blog-list">
 
       <!-- BLOG POST 1 -->
-      <a href="post-1.html" class="blog-card">
+      <a href="/rogue-moments-photography/pages/blog/post-1.html" class="blog-card">
 
         <div class="blog-image">
           <img
-            src="../../images/blog/post-1/cover.jpg"
+            src="/rogue-moments-photography/images/blog/post-1/cover.jpg"
             alt="Golden hour portrait session preview"
           />
         </div>
@@ -63,11 +63,11 @@
       </a>
 
       <!-- BLOG POST 2 -->
-      <a href="post-2.html" class="blog-card">
+      <a href="/rogue-moments-photography/pages/blog/post-2.html" class="blog-card">
 
         <div class="blog-image">
           <img
-            src="../../images/blog/post-2/cover.jpg"
+            src="/rogue-moments-photography/images/blog/post-2/cover.jpg"
             alt="Night city photography preview"
           />
         </div>
@@ -87,11 +87,11 @@
       </a>
 
       <!-- BLOG POST 3 -->
-      <a href="post-3.html" class="blog-card">
+      <a href="/rogue-moments-photography/pages/blog/post-3.html" class="blog-card">
 
         <div class="blog-image">
           <img
-            src="../../images/blog/post-3/cover.jpg"
+            src="/rogue-moments-photography/images/blog/post-3/cover.jpg"
             alt="Couples photography session preview"
           />
         </div>
@@ -111,11 +111,11 @@
       </a>
 
       <!-- BLOG POST 4 -->
-      <a href="post-4.html" class="blog-card">
+      <a href="/rogue-moments-photography/pages/blog/post-4.html" class="blog-card">
 
         <div class="blog-image">
           <img
-            src="../../images/blog/post-4/cover.jpg"
+            src="/rogue-moments-photography/images/blog/post-4/cover.jpg"
             alt="Photo editing process preview"
           />
         </div>
@@ -139,7 +139,26 @@
   </main>
 
   <!-- SHARED NAVIGATION SCRIPT -->
-  <script src="../../js/navigation.js"></script>
+  <script>
+    const navigationContainer = document.getElementById("navigation-container");
+
+    if (navigationContainer) {
+      fetch("/rogue-moments-photography/components/navigation.html")
+        .then(response => {
+          if (!response.ok) {
+            throw new Error("Navigation file could not be loaded.");
+          }
+
+          return response.text();
+        })
+        .then(data => {
+          navigationContainer.innerHTML = data;
+        })
+        .catch(error => {
+          console.error("Navigation failed to load:", error);
+        });
+    }
+  </script>
 
 </body>
 </html>
